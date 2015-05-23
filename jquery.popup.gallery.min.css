@@ -1,0 +1,35 @@
+@charset "utf-8";
+/** CSS for jQuery plugin 'gallery' v.1.0.1 | Copyright (©) by Konstantin Kachurenko <konstantin.kachurenko@gmail.com> | The MIT License (MIT) http://opensource.org/licenses/MIT */
+.popup.popup-gallery{width:auto;height:auto;min-width:0;min-height:0;max-width:80%;max-height:87%;-webkit-box-sizing:border-box;box-sizing:border-box}
+@media screen and (max-width: 420px) and (orientation: portrait){.popup.popup-gallery{max-width:100%}}
+.popup-gallery.popup-overlay{background-color:rgba(0,0,0,.8)}
+.popup-gallery.popup-overlay .popup-close{position:fixed;z-index:4;display:block}
+.popup-gallery.popup-overlay .popup-nav-prev,.popup-gallery.popup-overlay .popup-nav-next{display:block;position:fixed;z-index:3;top:-25%;width:10%;height:150%;visibility:hidden}
+.popup-gallery.popup-overlay .popup-nav-prev{left:0}
+.popup-gallery.popup-overlay .popup-nav-next{right:0}
+.popup-gallery.popup-overlay .popup-loader{display:block;position:fixed;visibility:hidden}
+.popup-gallery.popup-overlay .popup-show{visibility:visible}
+.popup-gallery.popup-overlay .popup-nohover{background-color:transparent !important}
+.popup-gallery.effect-slide{-webkit-transform:scale(0.7);-ms-transform:scale(0.7);-o-transform:scale(0.7);transform:scale(0.7)}
+.popup-gallery.popup-show.effect-slide{-webkit-transform:scale(1);-ms-transform:scale(1);-o-transform:scale(1);transform: scale(1)}
+.popup-gallery.effect-slide-left,.popup-gallery.effect-slide-right{-webkit-transform:none;-ms-transform:none;-o-transform:none;transform:none}
+.effect-inverse-left,.effect-inverse-right{opacity: 0 !important}
+.effect-inverse-left{left: 100% !important}
+.effect-inverse-right{left: 0 !important}
+/** Тема по умолчанию */
+.popup.popup-gallery:not(.popup-unstyled){-webkit-box-shadow: 0 0 12px 0 rgba(0,0,0,.75);box-shadow: 0 0 12px 0 rgba(0,0,0,.75);}
+.popup-gallery.popup-overlay .popup-close:not(.popup-unstyled){width:1px;height:1px;line-height:1px;top:8%;right:5%;}
+.popup-gallery.popup-overlay .popup-close:not(.popup-unstyled):after{content:"\00D7";display:inline-block;width:34px;height:34px;margin:-17px 0 0 -17px;font-family:sans-serif;font-size:24px;font-weight:normal;text-align:center;line-height:.2em;cursor:pointer;background-color:#FEFEFE;opacity:.9;-webkit-border-radius:50% 50% 50% 50%;border-radius: 50% 50% 50% 50%;padding: 15px 0;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box}
+.popup-gallery.popup-overlay .popup-close:not(.popup-unstyled):hover:after{opacity:1}
+.popup-gallery.popup-overlay .popup-nav-prev:not(.popup-unstyled),.popup-gallery.popup-overlay .popup-nav-next:not(.popup-unstyled){cursor:pointer;background-color:rgba(0,0,0,0);-webkit-transition:all .35s ease 0s;-ms-transition:all .35s ease 0s;-o-transition:all .35s ease 0s;transition:all .35s ease 0s}
+.popup-gallery.popup-overlay .popup-nav-prev:not(.popup-unstyled):hover,.popup-gallery.popup-overlay .popup-nav-next:not(.popup-unstyled):hover{background-color:rgba(0,0,0,.4)}
+.popup-gallery.popup-overlay .popup-nav-prev:not(.popup-unstyled):before,.popup-gallery.popup-overlay .popup-nav-next:not(.popup-unstyled):before{position:absolute;left:0;top:50%;width:100%;height:1px;font-size:32px;font-weight:bold;text-align:center;line-height:1px;color:#fff;opacity:.9}
+.popup-gallery.popup-overlay .popup-nav-prev:not(.popup-unstyled):before{content:"\2190"}
+.popup-gallery.popup-overlay .popup-nav-next:not(.popup-unstyled):before{content:"\2192"}
+.popup-gallery.popup-overlay .popup-nav-prev:not(.popup-unstyled):hover:before,.popup-gallery.popup-overlay .popup-nav-next:not(.popup-unstyled):hover:before{opacity:1}
+.popup-gallery.popup-overlay .popup-loader:not(.popup-unstyled){left:45%;top:50%;width:10%;height:28px;font-size:28px;line-height:28px;text-align:center;vertical-align:middle;color:#fefefe;margin:-14px auto auto;opacity:0;-webkit-animation:popup-loader 2s infinite ease;animation:popup-loader 2s infinite ease}
+.popup-gallery.popup-overlay .popup-loader:not(.popup-unstyled):empty:before{content: "Loading... "}
+@-webkit-keyframes popup-loader{0%,100%{opacity:0}
+50%{opacity:.8}}
+@keyframes popup-loader{0%,100%{opacity:0}
+50%{opacity:.8}}
